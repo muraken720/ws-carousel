@@ -1,2 +1,2 @@
-ws-carousel-
+ws-carousel
 ============
