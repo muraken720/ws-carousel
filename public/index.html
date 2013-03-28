@@ -212,12 +212,12 @@
 
     var $carousel = $('#myCarousel').carousel({interval: 0});
 
-    // Listen for the message event.
+    // Listen for the slide event.
     io.on('slide', function (message) {
       $carousel.carousel(message.data);
     });
 
-    // ページ送りはサーバに通知する
+    // Emit the send event.
     $(".carousel-control").click(function () {
       io.emit('send', { data: $(this).attr("data-slide")});
     });

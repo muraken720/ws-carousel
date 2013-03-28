@@ -10,7 +10,7 @@ app.configure(function () {
   app.use(express.static(__dirname + '/public'));
 });
 
-// Broadcast the new visitor event on ready route.
+// Broadcast the slide event on send route.
 app.io.route('send', function(req) {
   console.log(req.data);
   req.io.broadcast('slide', req.data);
